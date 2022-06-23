@@ -96,3 +96,6 @@ class Car(models.Model):
         if not self.car_id:
             raise ValidationError("car_id should be passed while creating Car objects....!")
         super(Car, self).save(*args, **kwargs)
+
+class Company(models.Model):
+    name = models.CharField(max_length=100)
